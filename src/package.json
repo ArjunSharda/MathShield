@@ -1,0 +1,35 @@
+{
+  "name": "mathshield",
+  "version": "1.0.0",
+  "description": "A math-based captcha tool",
+  "main": "index.ts",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArjunSharda/MathGuard.git"
+  },
+  "keywords": [
+    "math",
+    "mathshield",
+    "shield",
+    "security",
+    "guard",
+    "js",
+    "javascript"
+  ],
+  "author": "Arjun Sharda",
+  "license": "MIT",
+  "dependencies": {
+    "mathguard": "^1.0.0",
+    "node-fetch": "^3.2.6"
+  },
+  "bugs": {
+    "url": "https://github.com/ArjunSharda/MathShield/issues"
+  },
+  "homepage": "https://github.com/ArjunSharda/MathShield#readme",
+  "scripts": {
+    "test": "console.log(mathshield.generateProblem();"
+  }
+}
