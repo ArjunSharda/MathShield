@@ -22,7 +22,7 @@
   "author": "Arjun Sharda",
   "license": "MIT",
   "dependencies": {
-    "mathguard": "^1.0.0",
+    "mathshield": "^1.0.0",
     "node-fetch": "^3.2.6"
   },
   "bugs": {
