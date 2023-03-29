@@ -1,4 +1,6 @@
-class mathshield {
+import { createHash } from 'crypto';
+
+class MathShield {
   digits: number;
   callback: () => void;
   problem: string;
@@ -24,13 +26,20 @@ class mathshield {
     return eval(this.problem);
   }
 
-  checkAnswer(userAnswer: string): boolean {
-    if (parseFloat(userAnswer) === this.answer) {
+  checkAnswer(userAnswer: string, session: string): boolean {
+    const hash = createHash('sha256');
+    hash.update(userAnswer + session);
+    const hashedAnswer = hash.digest('hex');
+    if (hashedAnswer === this.answer.toString()) {
       this.callback();
       return true;
     }
     return false;
   }
+
+  getSession(): string {
+    return Math.random().toString(36).substring(2);
+  }
 }
 
-export default mathshield;
+export default MathShield;
